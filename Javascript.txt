@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+<body>
+<table>
+  	<tr>
+  		<th>Name</th>
+	<tr>
+    <tbody id= "countries">    	
+    </tbody>
+</table>
+<script>
+//Se crea el arreglo *Ejercicio 1*
+lista = ['France', 'Germany', 'England','Spain', 'Belgium', 'Italy', 'Portugal', 'Irland', 'Luxembourg']
+//Se sustituye Germany por la palabra Alemania *Ejercicio 3*
+lista.splice(lista.indexOf("Germany"),1,"Alemania")
+//Se elimina del arreglo el pais Spain *Ejercicio 4*
+lista.splice(lista.indexOf("Spain"),1)
+//Se llama cada elemento de la lista y se agrega al elemento countries *Ejercicio 2*
+lista.forEach(myFunction);
+function myFunction(item, index) {
+  var table = document.getElementById("countries");  
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  cell1.innerHTML = item;
+}
+</script>
+</body>
+</html>
+
+
